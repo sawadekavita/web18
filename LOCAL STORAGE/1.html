@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div id="navbar">
+        <div>Backend</div>
+        <div>Frontend</div>
+    </div>
+    <form id="investorsForm">
+        <input id="imgURL" type="text" placeholder="Enter Image URL"/>
+        <input  id="name" type="text" placeholder="Enter Investor name"/>
+        <input  id="role" type="text" placeholder="Enter Investor role"/>
+        <input  id="InvestorCompanyLogo" type="text" placeholder="Enter company logo URL"/>
+        <input type="submit"/>
+
+    </form>
+</body>
+</html>
+
+
+<script>
+var investorsData =[ 
+    { 
+        avatar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+        name:"vijay shekhar sharma" ,
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" ,
+       
+    },
+    { 
+        avatar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+        name:"vijay shekhar sharma" ,
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" ,
+       
+    },
+    { 
+        avatar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+        name:"vijay shekhar sharma" ,
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" ,
+       
+    },
+    { 
+        avatar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+        name:"vijay shekhar sharma" ,
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" ,
+       
+    },
+    { 
+        avatar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+        name:"vijay shekhar sharma" ,
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" ,
+       
+    },
+    { 
+        avatar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+        name:"vijay shekhar sharma" ,
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" ,
+       
+    },
+    { 
+        avatar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+        name:"vijay shekhar sharma" ,
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" ,
+       
+    },
+    { 
+        avatar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+        name:"vijay shekhar sharma" ,
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" ,
+       
+    },
+    
+]
+document.querySelector("#investorsForm").addEventListener("submit",investorsForm);
+
+var investorsArr=[]
+
+
+
+
+//array of objects
+function investorsFun(){
+    event.preventDefault();
+
+    //idofform.idofinput.value
+    var investorObj={
+  investorImg: investorsForm.imgURL.value,
+  investorName:investorsForm.name.value,
+  investorRole:investorsForm.role.value,
+  investorCompanyLogo:investorsForm.companylogo.value,
+};
+investorArr.push(investorsObj);
+    console.log(investosrArr);
+    localStorage.setItem("investorsData",JSON.stringify(investorArr))
+}
+console.log(investorsArr);
+</script>
